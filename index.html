@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureMind Counseling System (FCS)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'fcs-bg': '#0f172a',
+              'fcs-cyan': '#00f0ff',
+              'fcs-magenta': '#ff00ff',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .neon-cyan { color: #00f0ff; text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+        .neon-magenta { color: #ff00ff; text-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(0, 240, 255, 0.1); }
+        .glow-border-cyan { border: 1px solid rgba(0, 240, 255, 0.3); box-shadow: 0 0 15px rgba(0, 240, 255, 0.1); }
+        .glow-button-cyan { transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0, 240, 255, 0.3); }
+        .glow-button-cyan:hover { box-shadow: 0 0 20px rgba(0, 240, 255, 0.6); transform: translateY(-1px); }
+        
+        input[type=range].neon-slider {
+          -webkit-appearance: none;
+          background: transparent;
+        }
+        input[type=range].neon-slider::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 4px;
+          background: #1e293b;
+          border-radius: 2px;
+          border: 1px solid rgba(255, 0, 255, 0.2);
+        }
+        input[type=range].neon-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          background: #ff00ff;
+          cursor: pointer;
+          margin-top: -9px;
+          box-shadow: 0 0 10px #ff00ff, 0 0 20px rgba(255, 0, 255, 0.6);
+          border: 2px solid white;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f0ff; }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #00f0ff; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?deps=react@19.0.0,react-dom@19.0.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?deps=react@19.0.0,react-dom@19.0.0",
+    "recharts": "https://esm.sh/recharts@2.15.1?deps=react@19.0.0,react-dom@19.0.0",
+    "zustand": "https://esm.sh/zustand@5.0.1?deps=react@19.0.0",
+    "firebase/app": "https://esm.sh/firebase@12.8.0/app",
+    "firebase/firestore": "https://esm.sh/firebase@12.8.0/firestore",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "firebase/": "https://esm.sh/firebase@12.8.0/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
